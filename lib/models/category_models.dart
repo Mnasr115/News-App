@@ -7,5 +7,5 @@ class CategoryModel {
     required this.text,
     required this.image,
     this.subtitle,
-});
+  });
 }
