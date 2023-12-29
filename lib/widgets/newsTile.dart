@@ -11,12 +11,13 @@ class NewsTile extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(6),
-          child: Image.asset(
+          child: ,
+          /*Image.asset(
             articleModel.image!,
             height: 200,
             width: double.infinity,
             fit: BoxFit.cover,
-          ),
+          )*/
         ),
         const SizedBox(
           height: 12,
@@ -26,7 +27,7 @@ class NewsTile extends StatelessWidget {
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(
-              fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
+              fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black),
         ),
         Text(
           articleModel.subtitle?? '',
