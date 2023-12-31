@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/article_model.dart';
 
@@ -11,13 +12,18 @@ class NewsTile extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(6),
-          child: ,
-          /*Image.asset(
+          child: CachedNetworkImage(
+            imageUrl: articleModel.image ??
+                'https://s.yimg.com/ny/api/res/1.2/9.VX7JLONmASvt3t8bY3Rg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04OTI-/https://media.zenfs.com/en/techcrunch_350/0ac3866f955ea527afe575551d9d9535',
+            height: 200,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ), /*Image.asset(
             articleModel.image!,
             height: 200,
             width: double.infinity,
             fit: BoxFit.cover,
-          )*/
+          ),*/
         ),
         const SizedBox(
           height: 12,
@@ -30,7 +36,7 @@ class NewsTile extends StatelessWidget {
               fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black),
         ),
         Text(
-          articleModel.subtitle?? '',
+          articleModel.subtitle ?? '',
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(

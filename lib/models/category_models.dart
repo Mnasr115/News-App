@@ -1,11 +1,9 @@
 class CategoryModel {
-  final String text;
-  final String? subtitle;
+  final String categoryName;
   final String image;
 
   const CategoryModel({
-    required this.text,
+    required this.categoryName,
     required this.image,
-    this.subtitle,
   });
 }
