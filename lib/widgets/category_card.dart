@@ -7,7 +7,7 @@ class CategoryCard extends StatelessWidget {
   final CategoryModel category;
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: const EdgeInsets.only(right: 16),
       child: GestureDetector(
         onTap: (){
